@@ -182,7 +182,7 @@ class DataScraper:
         header = ['negocio', 'tipo_imovel', 'municipio', 'anunciante', 'contato_anunciante', 'preco', 'endereco',
                   'area', 'quartos', 'banheiros', 'vagas', 'data_publicacao', 'link']
 
-        with concurrent.futures.ThreadPoolExecutor() as executor, open(filename, 'w', newline='',
+        with ThreadPoolExecutor() as executor, open(filename, 'w', newline='',
                                                                        encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=header)
             writer.writeheader()
