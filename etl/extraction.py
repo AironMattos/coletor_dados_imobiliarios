@@ -12,7 +12,7 @@ class DataScraper:
     def __init__(self, property_type, business_type, city, uf):
         # Metódo construtor com url e header base
         self.base_url = "https://www.imovelweb.com.br"
-        self.scraper = cloudscraper.create_scraper(browser={'custom': 'ScraperBot/1.0',})
+        self.scraper = cloudscraper.create_scraper(browser={'custom': 'ScraperBot/2.0',})
         self.property_type = property_type
         self.business_type = business_type
         self.city = city
